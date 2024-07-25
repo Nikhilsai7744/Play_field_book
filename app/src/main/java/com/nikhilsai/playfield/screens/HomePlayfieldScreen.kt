@@ -182,7 +182,83 @@ fun HomeScreen(homeViewModel: HomeViewModel = viewModel()) {
                             .background(color = Color.White)
                     )
 
+                    Box(
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 220.dp,
+                                y = 172.dp)
+                            .requiredWidth(width = 146.dp)
+                            .requiredHeight(height = 211.dp)
+                            .clip(shape = RoundedCornerShape(15.dp))
+                            .background(color = Color.White)
+                    )
 
+                    Image(
+                        painter = painterResource(id = R.drawable.cs),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 30.dp,
+                                y = 90.dp)
+                            .requiredWidth(width = 340.dp)
+                            .requiredHeight(height = 220.dp)
+                            .clip(shape = RoundedCornerShape(15.dp)))
+                    Box(
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 219.dp,
+                                y = 417.dp)
+                            .requiredWidth(width = 147.dp)
+                            .requiredHeight(height = 150.dp)
+                            .clip(shape = RoundedCornerShape(15.dp))
+                            .background(color = Color.White)
+                    )
+
+                    Image(
+                        painter = painterResource(id = R.drawable.ss),
+                        contentDescription = " ",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 30.dp,
+                                y = 540.dp)
+                            .requiredWidth(width = 340.dp)
+                            .requiredHeight(height = 220.dp))
+                    Image(
+                        painter = painterResource(id = R.drawable.pro),
+                        contentDescription = " ",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 1.dp,
+                                y = 26.dp)
+                            .requiredSize(size = 42.dp)
+                            .clip(shape = CircleShape)
+                            .border(border = BorderStroke(0.10000000149011612.dp, Color(0xffbdbdbd)),
+                                shape = CircleShape))
+                    Image(
+                        painter = painterResource(id = R.drawable.ts),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 30.dp,
+                                y = 240.dp)
+                            .requiredWidth(width = 340.dp)
+                            .requiredHeight(height = 220.dp)
+                            .clip(shape = RoundedCornerShape(20.dp)))
+                    Image(
+                        painter = painterResource(id = R.drawable.fs),
+                        contentDescription = " ",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(x = 30.dp,
+                                y = 390.dp)
+                            .requiredWidth(width = 340.dp)
+                            .requiredHeight(height = 220.dp)
+                            .clip(shape = RoundedCornerShape(10.dp))
+                            .clickable {
+                                localContext.startActivity(
+                                    Intent(localContext, AddtoCartActivity::class.java)
+                                )
+                            })
                 }
 
             }
