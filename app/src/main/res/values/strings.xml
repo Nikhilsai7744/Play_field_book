@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Playfield app</string>
+
+    <string name="hello">, </string>
+    <string name="terms_and_conditions_headerdes">Playfield booking App Term of Use
+    Terms and Conditions: By using our app, you agree to our booking policies and facility rules. Full terms are available in the app.
+
+Privacy Policy: We collect and use your data to manage bookings and enhance services. Review our Privacy Policy in the app for details.
+
+</string>
+    <string name="create_account">Create an Account </string>
+    <string name="welcome">Welcome Back</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="hide_password">Hide password</string>
+    <string name="show_password">Show password</string>
+    <string name="terms_and_conditions">By continuing you accept our Privacy Policy and Term of Use</string>
+    <string name="terms_and_conditions_header"></string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="or">or</string>
+    <string name="go_to_login">Already have an account? Login</string>
+
+    <string name="forgot_password">Forgot your password</string>
+    <string name="home">Select Your PlayField</string>
+    <string name="logout">Logout</string>
+    <string name="menu">Menu</string>
+    <string name="navigation_header">App Drawer</string>
+    <string name="title_activity_details_page">DetailsPageActivity</string>
+    <string name="title_activity_addto_cart">AddtoCartActivity</string>
+
+</resources>

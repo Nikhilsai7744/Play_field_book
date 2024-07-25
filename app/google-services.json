@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "856854850575",
+    "project_id": "playfieldbook-5c69f",
+    "storage_bucket": "playfieldbook-5c69f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856854850575:android:7fa82dd0ef6d76a24d877a",
+        "android_client_info": {
+          "package_name": "com.nikhilsai.playfield"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsmmL2KfsqjwQeqbnTnHKX9yMKGz0I5I8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
