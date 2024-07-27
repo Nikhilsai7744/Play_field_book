@@ -127,7 +127,30 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
                         y = 605.dp))
 
             val context = LocalContext.current
-            //
+            Box(
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 27.dp,
+                        y = 758.dp)
+                    .requiredWidth(width = 321.dp)
+                    .requiredHeight(height = 50.dp)
+                    .clickable {
+                        context.startActivity(
+                            Intent(context, PaymentActivity::class.java))
+                    }
+
+                    .clip(shape = RoundedCornerShape(15.dp))
+                    .background(color = Color(0xFF00B407)))
+            Text(
+                text = "Proceed to Checkout",
+                color = Color.White,
+                style = TextStyle(
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 108.dp,
+                        y = 773.dp))
             Image(
                 painter = painterResource(id = R.drawable.cs),
                 contentDescription = "",
