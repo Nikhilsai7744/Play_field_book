@@ -59,7 +59,125 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
             .requiredHeight(height = 640.dp)
             .background(color = Color.White)
     ) {
+        Box(
+            modifier = Modifier
+                .align(alignment = Alignment.TopStart)
+                .offset(x = (-7).dp,
+                    y = (-86).dp)
+                .requiredWidth(width = 375.dp)
+                .requiredHeight(height = 812.dp)
+                .background(color = Color.White)
+        ) {
 
+            Text(
+                text = "£ 310.00",
+                color = Color(0xFF9458D1),
+                textAlign = TextAlign.End,
+                style = TextStyle(
+                    fontSize = 30.sp),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 241.dp,
+                        y = 691.dp))
+            Text(
+                text = "£ 10.00",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 20.sp),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 295.dp,
+                        y = 641.dp))
+            Text(
+                text = "£ 300.00",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 20.sp),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 280.dp,
+                        y = 601.dp))
+
+            Text(
+                text = "Total Amount",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 14.sp),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 27.dp,
+                        y = 701.dp))
+            Text(
+                text = "tax",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 14.sp),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 27.dp,
+                        y = 645.dp))
+            Text(
+                text = "Ticket Price",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 14.sp),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 27.dp,
+                        y = 605.dp))
+
+            val context = LocalContext.current
+            //
+            Image(
+                painter = painterResource(id = R.drawable.cs),
+                contentDescription = "",
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 0.dp,
+                        y = 88.dp)
+                    .requiredWidth(width = 375.dp)
+                    .requiredHeight(height = 463.dp))
+            Box(
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 27.dp,
+                        y = 369.dp)
+                    .requiredWidth(width = 321.dp)
+                    .requiredHeight(height = 50.dp)
+                    .clip(shape = RoundedCornerShape(15.dp))
+                    .background(color = Color(0xffe8e8e8)))
+            Box(
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 258.dp,
+                        y = 374.dp)
+                    .requiredWidth(width = 85.dp)
+                    .requiredHeight(height = 40.dp)
+                    .clip(shape = RoundedCornerShape(11.dp))
+                    .background(color = Color(0xFF00B407)))
+            Text(
+                text = "Apply",
+                color = Color.White,
+                style = TextStyle(
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Medium),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 279.dp,
+                        y = 384.dp))
+            Text(
+                text = "Promo Code",
+                color = Color.Black.copy(alpha = 0.2f),
+                style = TextStyle(
+                    fontSize = 14.sp),
+                modifier = Modifier
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 46.dp,
+                        y = 385.dp)
+                    .requiredWidth(width = 86.dp))
+            //
+
+        }
     }
 }
 
