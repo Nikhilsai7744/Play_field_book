@@ -198,7 +198,25 @@ fun Greeting2(name: String, modifier: Modifier = Modifier) {
                     .offset(x = 46.dp,
                         y = 385.dp)
                     .requiredWidth(width = 86.dp))
-            //
+            Text(
+
+                text = "This is a Cricket stadium which is - \n" +
+
+                        "established around 1950. This ground is  \n" +
+
+                        "known as best in the world and largest ground around the world. \n"
+                ,
+
+                color = Color.Black,
+                textDecoration = TextDecoration.Underline,
+                style = TextStyle(
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Medium
+                ),
+                modifier = Modifier.padding(top = 16.dp)
+                    .align(alignment = Alignment.TopStart)
+                    .offset(x = 5.dp,
+                        y = 451.dp))
 
         }
     }
