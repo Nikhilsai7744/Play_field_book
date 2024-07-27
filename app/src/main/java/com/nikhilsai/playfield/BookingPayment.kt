@@ -80,7 +80,111 @@ fun StyledTextField(
 }
 
 class PaymentActivity : ComponentActivity() {
+    @SuppressLint("SuspiciousIndentation")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
 
+            val context = LocalContext.current
+            val gradient45 = Brush.linearGradient(
+                colors = listOf(Color.White, Color.White),
+                start = Offset(0f, Float.POSITIVE_INFINITY),
+                end = Offset(Float.POSITIVE_INFINITY, 0f)
+            )
+
+            Surface(
+                modifier = Modifier
+                    .background(gradient45)
+                    .fillMaxSize()
+                    .padding(28.dp)
+            ) {
+
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(gradient45),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Image(
+                        modifier = Modifier.size(150.dp),
+                        painter = painterResource(id = R.drawable.card),
+                        contentDescription = null
+                    )
+
+                    Spacer(modifier = Modifier.height(5.dp))
+
+                    Spacer(modifier = Modifier.height(15.dp))
+                    HeadingTextComponent(value = "Payment Details")
+                    Spacer(modifier = Modifier.height(5.dp))
+
+                    StyledTextField(
+                        label = "cardholder's name",
+                        icon = Icons.Default.AccountBalance,
+                        onTextChanged = {
+                            // Handle text change
+                        }
+                    )
+                    StyledTextField(
+                        label = "Card Type",
+                        icon = Icons.Default.Sort,
+                        onTextChanged = {
+                            // Handle text change
+                        }
+                    )
+                    StyledTextField(
+                        label = "Card Number",
+                        icon = Icons.Default.CreditCard,
+                        onTextChanged = {
+                            // Handle text change
+                        }
+                    )
+
+
+
+                    StyledTextField(
+                        label = "3 digits Cvv Number",
+                        icon = Icons.Default.Lock,
+                        onTextChanged = {
+                            // Handle text change
+                        }
+                    )
+
+                    Spacer(modifier = Modifier.height(15.dp))
+
+                    Button(
+                        modifier = Modifier
+                            .wrapContentWidth()
+                            .heightIn(48.dp),
+                        onClick = {
+                            context.startActivity(Intent(context, OrderSuccessActivity::class.java))
+                        },
+                        contentPadding = PaddingValues(),
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        shape = RoundedCornerShape(50.dp),
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(48.dp)
+                                .background(
+                                    brush = Brush.horizontalGradient(listOf(Primary, Primary)),
+                                    shape = RoundedCornerShape(20.dp)
+                                ),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "Proceed",
+                                fontSize = 18.sp,
+                                color = Color.White,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+                    Spacer(modifier = Modifier.height(0.dp))
+                }
+            }
+        }
+    }
 
 }
 
