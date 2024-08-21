@@ -150,27 +150,49 @@ class UserProfileActivity : ComponentActivity() {
                         }
 
                         // Input fields for user details
+                        TextField(
+                            value = name,
+                            onValueChange = { name = it },
+                            label = { Text("Name") },
+                            modifier = Modifier.fillMaxWidth(),
+                            singleLine = true
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
 
+                        TextField(
+                            value = email,
+                            onValueChange = { email = it },
+                            label = { Text("Email Id") },
+                            modifier = Modifier.fillMaxWidth(),
+                            singleLine = true
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
 
-
-
-
-
-
-
-
-
-                        //heretextfields
+                        TextField(
+                            value = location,
+                            onValueChange = { location = it },
+                            label = { Text("Location") },
+                            modifier = Modifier.fillMaxWidth(),
+                            singleLine = true
+                        )
                         Spacer(modifier = Modifier.height(16.dp))
 
                         // Save button
+                        Button(
+                            onClick = {
+                                // Handle the save action
+                                println("Saved Name: $name")
+                                println("Saved Email: $email")
+                                println("Saved Location: $location")
 
-
-
-
-
-
-                        //save here
+                                // Navigate to PlayfieldMain
+                                val intent = Intent(this@UserProfileActivity, PlayfieldMain::class.java)
+                                startActivity(intent)
+                            },
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text(text = "Save")
+                        }
                     }
 
                     if (shouldShowFullImage && hasPhoto) {

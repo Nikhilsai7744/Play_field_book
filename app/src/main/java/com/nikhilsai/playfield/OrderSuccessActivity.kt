@@ -53,25 +53,68 @@ class OrderSuccessActivity : ComponentActivity() {
                 end = Offset(Float.POSITIVE_INFINITY, 0f)
             )
 
-                Surface(
-                    modifier = Modifier
-                        .background(gradient45)
-                        .fillMaxSize()
-                        .padding(28.dp)
-                ) {
+            Surface(
+                modifier = Modifier
+                    .background(gradient45)
+                    .fillMaxSize()
+                    .padding(28.dp)
+            ) {
 
-                    Column(modifier = Modifier
-                        .fillMaxSize()
-                        .background(gradient45),
-                        verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally) {
-                        HeadingTextComponent(value = "Booking Successfully Completed")
-                        Spacer(modifier = Modifier.height(65.dp))
+                Column(modifier = Modifier
+                    .fillMaxSize()
+                    .background(gradient45),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally) {
+                    HeadingTextComponent(value = "Booking Successfully Completed")
+                    Spacer(modifier = Modifier.height(65.dp))
 
 //                        Image(painter = painterResource(id = R.drawable.sooo),contentDescription = null)
+                    Image(
+                        painter = painterResource(id = R.drawable.sooo),
+                        contentDescription = "",
+                        modifier = Modifier
+//                                .align(alignment = Alignment.TopStart)
+                            .offset(x = 0.dp,
+                                y = 44.dp)
+                            .requiredWidth(width = 225.dp)
+                            .requiredHeight(height = 323.dp))
+                    Spacer(modifier = Modifier.height(105.dp))
+                    val field = ""
+                    Button(
+                        modifier = Modifier
+                            .wrapContentWidth()
+                            .heightIn(48.dp),
+                        onClick = {
+                            context.startActivity(Intent(context, PlayfieldMain::class.java)
+                                .putExtra("play", field)
+                            )
+                        },
+                        contentPadding = PaddingValues(),
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        shape = RoundedCornerShape(50.dp),
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(48.dp)
+                                .background(
+                                    brush = Brush.horizontalGradient(listOf(Primary, Primary)),
+                                    shape = RoundedCornerShape(20.dp)
+                                ),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "Back to Home",
+                                fontSize = 18.sp,
+                                color = Color.White,
+                                fontWeight = FontWeight.Bold
+                            )
+
+                        }
 
                     }
                 }
+            }
         }
     }
 }
